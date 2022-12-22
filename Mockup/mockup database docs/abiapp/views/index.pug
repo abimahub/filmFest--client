@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em filmFest], a local festival of films.
+
+  if error
+    p Error getting dynamic content.
+  else
+    p The library has the following record counts:
+
+    ul
+      li #[strong Films:] !{data.film_count}
+      li #[strong Screenings:] !{data.film_instance_count}
+      li #[strong Screenings available:] !{data.film_instance_available_count} 
+      li #[strong Locations:] !{data.location_count}
+      li #[strong Date:] !{data.date_count}

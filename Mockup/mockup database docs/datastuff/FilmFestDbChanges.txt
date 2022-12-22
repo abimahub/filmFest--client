@@ -1,0 +1,40 @@
+local_library => film_fest
+
+Transliterating template mongodb for local_library to custom mongodb for film festival abi_fest
+
+local_library                                                                 film_fest
+
+catalog/ URL for the index page
+Routes for the library crud operations: 
+(look at routes/catalog.js also)
+(Plays into mongo.init, change models, controllers, and views, also)
+					
+    catalog <objects>				catalog <objects>				Also
+    catalog/books				catalog/films				catalog/Admin
+    catalog/authors				catalog/locations
+    catalog/genres				catalog/dates
+    catalog/bookinstances			catalog/filminstances  (pulls the schedule)
+
+    catalog/<object>/<id>			catalog/<object>/<id>
+    catalog/book/5899af...23A			catalog/film/5899af...23A				
+    catalog/author/5749af...25A		catalog/location/5749af...25A
+    catalog/genre/5823af...2AB			catalog/dates/5823af...2AB
+    catalog/bookinstance/4799af...63A		catalog/filminstance/4799af...63A
+
+    catalog/<object>/create			catalog/<object>/create
+    catalog/book/create			catalog/film/create
+    catalog/author/create			catalog/location/create
+    catalog/genre/create			catalog/dates/create
+    catalog/bookinstance/create		catalog/filminstance/create
+
+    catalog/<object>/<id>update		catalog/<object>/<id>update
+    catalog/book/5899af...23A/update		catalog/film/5899af...23A/update
+    catalog/author/5749af...25A/update		catalog/location/5749af...25A/update
+    catalog/genre/5823af...2AB/update		catalog/dates/5823af...2AB/update
+    catalog/bookinstance/4799af...63A/update	catalog/filminstance/4799af...63A/update
+
+    catalog/<object>/<id>delete		catalog/<object>/<id>delete
+    catalog/book/5899af...23A/delete		catalog/film/5899af...23A/delete
+    catalog/author/5749af...25A/delete		catalog/location/5749af...25A/delete
+    catalog/genre/5823af...2AB/delete		catalog/dates/5823af...2AB/delete
+    catalog/bookinstance/4799af...63A/delete 	catalog/filminstance/4799af...63A/delete 

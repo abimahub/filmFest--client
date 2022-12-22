@@ -3,7 +3,7 @@ import Catalog from './components/catalog';
 
 function App() {
 
-  const [libCatalog, setlibCatalog] = useState([]);
+  const [abiCatalog, setabiCatalog] = useState([]);
   useEffect(() => {getCatalog();},[]);
 
   const getCatalog = () => {
@@ -13,18 +13,18 @@ function App() {
       (data) => {
         console.log ("data: ",data );
   
-        setlibCatalog (data );
+        setabiCatalog (data );
       },
       (error) => {
         console.log(error);
-        setlibCatalog(null);
+        setabiCatalog(null);
       }
     );
   };
 
- if (!libCatalog) return <div>No Record Found</div>;
+ if (!abiCatalog) return <div>No Record Found</div>;
   return (
-    <Catalog libCatalog={libCatalog} />
+    <Catalog abiCatalog={abiCatalog} />
   )
  
 }  
